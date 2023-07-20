@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="505d450847d36110a369379bd36d43d7" label="Demo" max_length="40" name="x_649193_demo_app_demo" type="collection">
+        <element label="Initiator" max_length="32" name="initiator" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="3" default="1" label="State" max_length="40" name="state" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="In Progress" value="2"/>
+                <element inactive_on_update="false" label="New" value="1"/>
+                <element inactive_on_update="false" label="On Hold" value="3"/>
+            </choice>
+        </element>
+        <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
+        <index name="index">
+            <element name="initiator"/>
+        </index>
+        <index name="index2">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>
